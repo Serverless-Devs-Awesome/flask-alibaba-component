@@ -121,11 +121,6 @@ FlaskComponent:
                       Qualifier: Prod # 版本（可选)
                     - Path: '/a'
                       Qualifier: Prod # 版本（可选)
-       Bootstrap:
-          Port: 9000
-          Start: npm run start
-          App: app.py
-          Path: ./src/bootstrap
 ```
 
 ### 详细使用方法
@@ -303,12 +298,3 @@ Domains类型为：
     | Protocol | false | List(HTTP,HTTPS) | 协议 |
     | CertConfig | false | Struct | 域名证书 |
     | Routes | false | Struct | 路径配置 |
-
-##### Bootstrap
-
-| 参数名 |  必填|  类型|  参数描述 | 
-| --- |  --- |  --- |  --- | 
-| Port | false | Number | 启动端口 |
-| Start | false | String | 启动指令 |
-| App | false | String | 入口文件 |
-| Path | false | String | Bootstrap路径 |

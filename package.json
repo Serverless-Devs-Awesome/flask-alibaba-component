@@ -1,6 +1,6 @@
 {
   "name": "@serverless-devs/flask-alibaba",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Serverless Devs Tool Flask Framework Component For Alibaba Cloud",
   "keywords": [
     "Serverless",

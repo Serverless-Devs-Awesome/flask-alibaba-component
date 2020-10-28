@@ -2,7 +2,7 @@ Type: Component
 Name: flask
 Provider:
   - Alibaba
-Version: 0.0.17
+Version: 0.0.18
 Description: 阿里云Flask组件，帮助您快速部署Flask项目
 HomePage: https://www.aliyun.com/
 Tags:

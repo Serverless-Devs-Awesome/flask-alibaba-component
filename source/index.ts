@@ -7,7 +7,7 @@ import format = require('string-format');
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import fse = require('fs-extra');
-import { DEFAULTPORT, DEFAULTSTART, DEFAULTBOOTSTRAP, DEFAULTAPP } from './bootstrap';
+import { DEFAULTPORT, DEFAULTSTART, DEFAULTBOOTSTRAP } from './bootstrap';
 
 interface ProjectConfig {
   ProjectName: string;

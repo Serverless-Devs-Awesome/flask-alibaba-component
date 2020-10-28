@@ -1,7 +1,7 @@
 export const DEFAULTBOOTSTRAP = `#!/usr/bin/env bash
 
 export PORT={port}
-export FLASK_APP={app}
+export DEFAULTAPP={app}
 {start}`;
 
 export const DEFAULTPORT = 9000;

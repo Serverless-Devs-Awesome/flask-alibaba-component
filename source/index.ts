@@ -47,19 +47,20 @@ class TornadoComponent extends Framework {
       Function: inputs.Properties.Detail ? inputs.Properties.Detail.Function || {} : {},
       Service: inputs.Properties.Detail ? inputs.Properties.Detail.Service || {} : {}
     };
-    frameworkInputs.Properties.Detail.Function.Runtime = frameworkInputs.Properties.Detail.Function.Runtime || frameworkInputs.Properties.Runtime || "python3"
-    frameworkInputs.Properties.Detail.Function.Runtime = frameworkInputs.Properties.Detail.Function.Runtime.toLowerCase()
-    if(["python2.7", "python3.6", "python3.7"].indexOf(frameworkInputs.Properties.Detail.Function.Runtime)==-1){
-      throw new Error("The flash project runtime only supports python3 and python2.7")
+    frameworkInputs.Properties.Detail.Function.Runtime = frameworkInputs.Properties.Detail.Function.Runtime || frameworkInputs.Properties.Runtime || 'python3';
+    frameworkInputs.Properties.Detail.Function.Runtime = frameworkInputs.Properties.Detail.Function.Runtime.toLowerCase();
+    if (['python2.7', 'python3.6', 'python3.7'].indexOf(frameworkInputs.Properties.Detail.Function.Runtime) == -1) {
+      throw new Error('The flash project runtime only supports python3 and python2.7');
     }
-
-    frameworkInputs.Properties.Detail.Function.Handler = frameworkInputs.Properties.Detail.Function.Handler || frameworkInputs.Properties.Handler || "index.app"
-    if(frameworkInputs.Properties.Detail.Function.Runtime==="python3.7"){
+    frameworkInputs.Properties.Detail.Function.Handler = frameworkInputs.Properties.Detail.Function.Handler || frameworkInputs.Properties.Handler || 'index.app';
+    // console.log(frameworkInputs.Properties.Detail.Function.Runtime);
+    if (frameworkInputs.Properties.Detail.Function.Runtime === 'python3.7') {
+      frameworkInputs.Properties.Detail.Function.Runtime = 'custom';
       const { Detail = {} } = inputs.Properties;
       const formatStr = {
         port: DEFAULTPORT,
         start: Detail.Bootstrap ? Detail.Bootstrap.Start || DEFAULTSTART : DEFAULTSTART,
-        app: frameworkInputs.Properties.Detail.Function.Handler.replace(".", ":")
+        app: frameworkInputs.Properties.Detail.Function.Handler.replace('.', ':')
       };
       const bootstrapPath = Detail.Bootstrap ? Detail.Bootstrap.Path : undefined;
       if (bootstrapPath) {
@@ -73,10 +74,10 @@ class TornadoComponent extends Framework {
           IsConfig: Detail.Bootstrap ? true : false
         };
       }
-    }else{
+    } else {
       frameworkInputs.Bootstrap = {
         NoBootstrap: true
-      }
+      };
     }
     return await super.deploy(frameworkInputs);
   }

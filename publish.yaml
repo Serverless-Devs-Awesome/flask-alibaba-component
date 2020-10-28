@@ -2,10 +2,13 @@ Type: Component
 Name: flask
 Provider:
   - Alibaba
-Version: 0.0.12
+Version: 0.0.14
 Description: 阿里云Flask组件，帮助您快速部署Flask项目
 HomePage: https://www.aliyun.com/
 Tags:
+  - Flask
+  - Python
+  - Web
   - 函数计算
 Category: 基础云服务
 Commands:

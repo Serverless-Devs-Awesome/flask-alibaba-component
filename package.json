@@ -1,6 +1,6 @@
 {
   "name": "@serverless-devs/flask-alibaba",
-  "version": "0.0.12",
+  "version": "0.0.14",
   "description": "Serverless Devs Tool Flask Framework Component For Alibaba Cloud",
   "keywords": [
     "Serverless",
@@ -26,10 +26,13 @@
   },
   "scripts": {
     "watch": "tsc -w -p compile.tsconfig.json",
+    "cd": "npm install --production && tsc -p compile.tsconfig.json && cp -r ./node_modules ./src",
     "release": "npm install --production && tsc -p compile.tsconfig.json && cp -r ./node_modules ./src && s platform publish"
   },
   "dependencies": {
-    "@serverless-devs/s-framework": "^0.0.21"
+    "fs-extra": "^9.0.1",
+    "string-format": "^2.0.0",
+    "@serverless-devs/s-framework": "^0.0.22"
   },
   "devDependencies": {
     "@types/node": "^14.0.23",

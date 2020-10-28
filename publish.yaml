@@ -2,7 +2,7 @@ Type: Component
 Name: flask
 Provider:
   - Alibaba
-Version: 0.0.14
+Version: 0.0.15
 Description: 阿里云Flask组件，帮助您快速部署Flask项目
 HomePage: https://www.aliyun.com/
 Tags:
@@ -73,7 +73,8 @@ Properties:
     Type:
       - Enum:
           - Python2.7
-          - Python3
+          - Python3.6
+          - Python3.7
   CodeUri:
     Required: false
     Default: ./

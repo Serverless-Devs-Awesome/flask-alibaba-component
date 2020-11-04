@@ -75,6 +75,9 @@ class TornadoComponent extends Framework {
         };
       }
     } else {
+      if (frameworkInputs.Properties.Detail.Function.Runtime === 'python3.6') {
+        frameworkInputs.Properties.Detail.Function.Runtime = 'python3';
+      }
       frameworkInputs.Bootstrap = {
         NoBootstrap: true
       };
